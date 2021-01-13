@@ -31,5 +31,11 @@ div > ul{
 margin: 0;
 padding: 0;
 }
+i:hover{
+  color:orangered;
+}
+.footericon:hover{
+  cursor:pointer;
+}
 
 /*  */

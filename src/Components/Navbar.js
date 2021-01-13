@@ -1,10 +1,9 @@
 import React from 'react'
 import {NavLink} from "react-router-dom"
-import {GiConcentrationOrb} from 'react-icons/gi';
 import {FaSearch} from 'react-icons/fa';
 import {RiMenuAddLine} from 'react-icons/ri';
 import Servicemodal from "./Modals/Servicemodal"
-
+import logo from "../Assets/coding.svg";
 function Navbar() {
 
     const [modalShow, setModalShow] = React.useState(false);
@@ -15,9 +14,9 @@ function Navbar() {
                 <div className="row align-items-center">
 
                     <div className="col-md-1 d-flex justify-content-end">
-                        <GiConcentrationOrb size="50px" color="#1f3940"/>
+                        <i><img src={logo} alt="img" style={{height:"60px",width:"60px"}}/></i>
                     </div>
-                     <div style={{fontFamily: 'jura',fontSize:'2rem'}} className="col-md-4 d-flex justify-content-start">
+                     <div style={{fontFamily: 'jura',fontSize:'3rem'}} className="col-md-4 d-flex justify-content-start">
                          CODEMANIAC 
                     </div>
                     <div className="col-md-5 mx-auto">

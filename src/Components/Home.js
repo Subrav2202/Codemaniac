@@ -7,11 +7,14 @@ import { useHistory } from "react-router-dom";
 import img1 from "../Assets/img4.jpg";
 import img2 from "../Assets/img5.jpg";
 import img3 from "../Assets/img6.jpg";
-import Corousel1 from "./Homecomponents/Carousel1"
-import {FiFacebook,FiTwitter,FiInstagram} from 'react-icons/fi';
-import {FaGooglePlusG,FaLinkedinIn,FaPinterestP,FaWhatsapp,FaTelegramPlane} from 'react-icons/fa';
-import { AiOutlineSkype } from "react-icons/ai";
-import { RiMessengerLine } from "react-icons/ri";
+import img4 from "../Assets/iconskp.svg";
+import img5 from "../Assets/messenger.svg";
+import img6 from "../Assets/telegram.svg";
+import img7 from "../Assets/whatsapp.svg";
+
+import Corousel1 from "./Homecomponents/Carousel1";
+import { FiFacebook, FiTwitter, FiInstagram } from "react-icons/fi";
+import { FaGooglePlusG, FaLinkedinIn, FaPinterestP } from "react-icons/fa";
 function Home() {
   const history = useHistory();
   const ClickHandler = () => {
@@ -22,16 +25,6 @@ function Home() {
     <div>
       <div className="bgimage">
         <Navbar />
-        <div className="container-fluid">
-          <div className="row align-items-center" style={{ height: "80vh" }}>
-            <div className="col-md-7 d-flex justify-content-end">
-              <h1>Developing your success online.</h1>
-            </div>
-            <div className="col-md-5 d-flex justify-content-center">
-              <h1>LOGO</h1>
-            </div>
-          </div>
-        </div>
       </div>
       <Card1 />
       <Card2 />
@@ -137,36 +130,105 @@ function Home() {
         </div>
       </div>
 
-     
-     <Corousel1/> 
-     
-     
-     <footer style={{backgroundColor:"#2486D6"}}>
-     <div className='container py-5'>
-      <div className='row'>
-        <div className="col-md-4" style={{borderRight:"1px ridge"}}>
-            <h3>CODEMANIAC</h3>
-            <p>We undertake projects for brand identity, web design, application development, content generation, social strategy, paid media strategy, influencer marketing & more.</p>
-            <div><i className="me-2"><FiFacebook/></i><FiTwitter/><i className="mx-2"><FaGooglePlusG/></i><FiInstagram/><i className="mx-2"><FaLinkedinIn/></i><FaPinterestP/></div>
-          </div>
-          <div className="col-md-4">
-            <div className="row">
-                <div className="offset-md-1 col-md-11">
-                <h6>LETS DISCUSS</h6>
-                <div><i><AiOutlineSkype size={"30px"} color={"white"}/></i><i><FaWhatsapp size={"30px"} color={"green"}/></i><i><FaTelegramPlane size={"30px"}/></i><i><RiMessengerLine size={"30px"}/></i></div>
-                </div>
-            </div>
-              
-          </div>
-      </div>
-      </div>
-     </footer>  
+      <Corousel1 />
 
-     
-    </div>
+      <footer style={{ backgroundColor: "#2486D6" }}>
+        <div className="container py-5">
+          <div className="row">
+            <div className="col-md-4" style={{ borderRight: "1px ridge" }}>
+              <h3>CODEMANIAC</h3>
+              <p>
+                We undertake projects for brand identity, web design,
+                application development, content generation, social strategy,
+                paid media strategy, influencer marketing & more.
+              </p>
+              <div>
+                <i className="me-2">
+                  <FiFacebook />
+                </i>
+                <i>
+                  <FaGooglePlusG />
+                </i>
+                <i className="mx-2">
+                  <FiTwitter />
+                </i>
+                <i>
+                  <FiInstagram />
+                </i>
+                <i className="mx-2">
+                  <FaLinkedinIn />
+                </i>
+                <i>
+                  <FaPinterestP />
+                </i>
+              </div>
+            </div>
+            <div className="col-md-4" style={{ borderRight: "1px ridge" }}>
+              <div className="row">
+                <div className="offset-md-1 col-md-11">
+                  <h6>LETS DISCUSS</h6>
+                  <div className="my-3 footericon">
+                    <i className="me-3">
+                      <img
+                        src={img4}
+                        alt="img"
+                        style={{ width: "30px", height: "30px" }}
+                      />
+                    </i>
+                    <i>
+                      <img
+                        src={img5}
+                        className="footericon"
+                        alt="img"
+                        style={{ width: "30px", height: "30px" }}
+                      />
+                    </i>
+                    <i className="mx-3 footericon">
+                      <img
+                        src={img6}
+                        alt="img"
+                        style={{ width: "30px", height: "30px" }}
+                      />
+                    </i>
+                    <i>
+                      <img
+                        src={img7}
+                        className="footericon"
+                        alt="img"
+                        style={{ width: "30px", height: "30px" }}
+                      />
+                    </i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            <div className="col-md-4">
+            <div className="row">
+            <div className="offset-md-1 col-md-11">
+              <h6>CONTACT INFO</h6>
+              <p>Bungalow A2, Paradise Society, opp. Lane Hotel Purnabramha, Balewadi Phata, Baner, Pune, Maharashtra -411045</p>
+              <p>Email: hello@codemaniac.com</p>
+              <p>Phone: +91 9307 999 777</p>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    
+      <div className="container-fluid bg-dark">
+          <div className="row align-items-center">
+            <div className="offset-md-2 col-md-3">
+              <p style={{color:"white"}}>© 2020 CODEMANIAC Digital Solutions</p>
+              </div>
+              <div className="offset-md-3 col-md-3">
+              <p style={{color:"white"}}>T&C | Privacy Policy</p>
+              </div>
+        </div>
+      </div>
+      </div>
   );
 }
 
 export default Home;
-
-
