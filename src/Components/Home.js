@@ -8,7 +8,10 @@ import img1 from "../Assets/img4.jpg";
 import img2 from "../Assets/img5.jpg";
 import img3 from "../Assets/img6.jpg";
 import Corousel1 from "./Homecomponents/Carousel1"
-
+import {FiFacebook,FiTwitter,FiInstagram} from 'react-icons/fi';
+import {FaGooglePlusG,FaLinkedinIn,FaPinterestP,FaWhatsapp,FaTelegramPlane} from 'react-icons/fa';
+import { AiOutlineSkype } from "react-icons/ai";
+import { RiMessengerLine } from "react-icons/ri";
 function Home() {
   const history = useHistory();
   const ClickHandler = () => {
@@ -135,7 +138,29 @@ function Home() {
       </div>
 
      
-     <Corousel1/>     
+     <Corousel1/> 
+     
+     
+     <footer style={{backgroundColor:"#2486D6"}}>
+     <div className='container py-5'>
+      <div className='row'>
+        <div className="col-md-4" style={{borderRight:"1px ridge"}}>
+            <h3>CODEMANIAC</h3>
+            <p>We undertake projects for brand identity, web design, application development, content generation, social strategy, paid media strategy, influencer marketing & more.</p>
+            <div><i className="me-2"><FiFacebook/></i><FiTwitter/><i className="mx-2"><FaGooglePlusG/></i><FiInstagram/><i className="mx-2"><FaLinkedinIn/></i><FaPinterestP/></div>
+          </div>
+          <div className="col-md-4">
+            <div className="row">
+                <div className="offset-md-1 col-md-11">
+                <h6>LETS DISCUSS</h6>
+                <div><i><AiOutlineSkype size={"30px"} color={"white"}/></i><i><FaWhatsapp size={"30px"} color={"green"}/></i><i><FaTelegramPlane size={"30px"}/></i><i><RiMessengerLine size={"30px"}/></i></div>
+                </div>
+            </div>
+              
+          </div>
+      </div>
+      </div>
+     </footer>  
 
      
     </div>
